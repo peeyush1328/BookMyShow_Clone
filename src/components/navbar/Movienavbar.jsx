@@ -58,8 +58,8 @@ function NavLG() {
 const Secnav = () => {
   return (
     <>
-      <div className="container flex mx-auto px-4 items-center justify-between">
-        <div className="flex items-center w-1/2 gap-5">
+      <div className="container flex mx-auto px-4 items-center  md:justify-between">
+        <div className="flex  items-center w-full  md:w-1/2 md:gap-3 justify-between md:justify-start">
           <Link to="/movies" className="text-gray-200  hover:text-white">
             <button>Movies</button>
           </Link>
@@ -79,7 +79,7 @@ const Secnav = () => {
             <button>Activities</button>
           </Link>
         </div>
-        <div className=" hidden gap-5 items-center lg:flex md:flex">
+        <div className="hidden   md:flex  md:gap-3 items-center">
           <Link to="" className="text-gray-200 text-sm hover:text-white">
             <button>ListYourShow</button>
           </Link>

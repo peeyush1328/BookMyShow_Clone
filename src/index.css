@@ -8,9 +8,11 @@ body {
 .slick-prev {
   left: 2% !important;
   z-index: 1;
+  opacity: 3;
 }
 
 .slick-next {
   right: 2% !important;
   z-index: 1;
+  opacity: 3;
 }

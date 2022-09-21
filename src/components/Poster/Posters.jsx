@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Movieposter = (props) => {
   return (
     <Link to={`/movies/${props.id}`}>
-      <div className="flex flex-col items-start gap-2 px-1 md:px-3 ">
+      <div className="flex flex-col w-full items-start gap-2 px-1 md:px-3 ">
         <div className="h-full w-full">
           <img
             src={`https://image.tmdb.org/t/p/original${props.poster_path}`}
