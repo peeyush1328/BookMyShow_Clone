@@ -1,14 +1,15 @@
 import React from "react";
 import { BiCaretDown, BiMenu, BiSearch } from "react-icons/bi";
 import { BsChevronLeft } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function NavSM() {
+  const usenavigaton = useNavigate();
   return (
     <>
       <div className="text-white flex item-center justify-between">
         <div className="flex flex-row items-center gap-3">
-          <span className="w-6 h-6">
+          <span onClick={() => usenavigaton(-1)} className="w-6 h-6">
             <BsChevronLeft className="w-full h-full" />
           </span>
           <h3 className="text-xl font-bold">Plays in Moradabad</h3>
