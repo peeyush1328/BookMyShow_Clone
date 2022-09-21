@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import Posters from "../Poster/Posters";
 
 const Poster = (props) => {
-  const { poster, title, subtitle, config, isDark } = props;
+  const { poster, title, subtitle, movieslider, isDark, notslider, config } =
+    props;
   const setting = {
     infinite: false,
     speed: 500,
@@ -21,7 +22,7 @@ const Poster = (props) => {
         breakpoint: 600,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToScroll: 2,
           initialSlide: 1,
         },
       },
@@ -30,7 +31,6 @@ const Poster = (props) => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          
         },
       },
     ],
@@ -38,6 +38,7 @@ const Poster = (props) => {
 
   return (
     <>
+   {title && (
       <div className="flex flex-col items-start sm:ml-3 ml-0 my-2">
         <h3
           className={`text-2xl font-bold ${
@@ -50,20 +51,29 @@ const Poster = (props) => {
           {subtitle}
         </p>
       </div>
-      {config && (
-        <Slider {...config}>
+      )}
+      {movieslider && (
+        <Slider {...movieslider}>
           {poster.map((each, index) => (
             <Posters {...each} isDark={isDark} key={index} />
           ))}
         </Slider>
       )}
-      {!config && (
+      {config && (
         <Slider {...setting}>
           {poster.map((each, index) => (
             <Posters {...each} isDark={isDark} key={index} />
           ))}
         </Slider>
       )}
+      
+
+      {notslider &&
+        poster.map((each, index) => (
+          <div key={index} className="flex flex-wrap w-1/2 md:w-1/3 lg:w-3/12 my-3">
+            <Posters {...each} isDark={isDark}  />
+          </div>
+        ))}
     </>
   );
 };

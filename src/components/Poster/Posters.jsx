@@ -12,7 +12,7 @@ const Movieposter = (props) => {
             className="h-full w-full rounded-md object-cover object-center"
           />
         </div>
-        <span className="h-20 md:h-30 w-full">
+        <span className="h-20 md:h-30 w-full items-start">
           <h3
             className={`text-center text-lg font-bold ${
               props.isDark ? "text-white" : "text-gray-700"

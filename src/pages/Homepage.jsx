@@ -20,7 +20,7 @@ const Homepage = () => {
   }, []);
   useEffect(() => {
     const reqpremmovies = async () => {
-      const premmovies = await axios.get("/now_playing");
+      const premmovies = await axios.get("/upcoming");
       setPremiereMovies(premmovies.data.results);
     };
     reqpremmovies();
@@ -50,6 +50,7 @@ const Homepage = () => {
       </div>
       <div className="container mx-auto px-4 md:px-12 my-8">
         <Poster
+          config={true}
           title="Recommended Movies"
           subtitle="List of Recommended Movies"
           poster={RecommendedMovies}
@@ -66,6 +67,7 @@ const Homepage = () => {
             />
           </div>
           <Poster
+            config={true}
             title="Premiers"
             subtitle="Brand new releases every Friday"
             poster={PremiereMovies}
@@ -75,6 +77,7 @@ const Homepage = () => {
       </div>
       <div className="container mx-auto px-4 md:px-12 my-8">
         <Poster
+          config={true}
           title="Online Streaming Events"
           poster={OnlineStreamingEvents}
           isDark={false}

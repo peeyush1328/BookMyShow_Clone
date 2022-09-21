@@ -182,7 +182,7 @@ const Moviepage = () => {
         {/* poster slider */}
         <div className="my-8">
           <Poster
-            config={setting}
+            movieslider={setting}
             title="You might also like "
             poster={Similar}
             isDark={false}

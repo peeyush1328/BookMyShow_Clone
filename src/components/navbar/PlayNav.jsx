@@ -27,7 +27,7 @@ function NavMD() {
       <div className="flex gap-3 w-full items-center">
         <div className="w-10 h-10">
           <img
-            src="https://lh3.googleusercontent.com/m0T5pBN2VgwdbWqJCHj75qsgIXIZEf8TPtfSK3el65lxNnoxMJwF9GwEwysG-vq9Fag"
+            src="http://www.lemondesign.co.in/wordpress/wp-content/uploads/2014/01/logo-on-gray.jpg"
             alt="logo"
             className="w-full h-full"
           />
@@ -105,7 +105,7 @@ const Secnav = () => {
             <button>Activities</button>
           </Link>
         </div>
-        <div className="flex gap-5 items-center">
+        <div className=" hidden lg:flex md:flex gap-5 items-center">
           <Link to="" className="text-gray-200 text-sm hover:text-white">
             <button>ListYourShow</button>
           </Link>
@@ -138,7 +138,7 @@ const PlayNav = () => {
           <NavLG />
         </div>
       </nav>
-      <div className="bg-darkBackground-950 px-4 py-2 hidden md:hidden lg:flex">
+      <div className="bg-darkBackground-950 px-4 py-2 flex">
         <Secnav />
       </div>
     </>
