@@ -3,11 +3,14 @@ import Movies from "../Hoc/Movies";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { MovieContext } from "../Contex/Moviecontex";
-import Slider from "react-slick";
 import { FaCcVisa, FaCcApplePay } from "react-icons/fa";
 import Poster from "../components/PosterSlider/Poster";
 import Moviehero from "../components/Moviehero/Moviehero";
 import Cast from "../components/Cast/Cast";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 const Moviepage = () => {
   const { id } = useParams();
@@ -47,71 +50,6 @@ const Moviepage = () => {
     };
     reqmovie();
   });
-
-  const settingcast = {
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  const setting = {
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 3,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 4,
-        },
-      },
-    ],
-  };
 
   return (
     <>
@@ -165,16 +103,43 @@ const Moviepage = () => {
           <h2 className="text-gray-800 font-bold text-2xl mb-4">
             Cast and Crew
           </h2>
-          <Slider {...settingcast}>
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={5}
+            modules={[Navigation]}
+            navigation={true}
+            className="mySwiper"
+            slidesPerGroup={4}
+            breakpoints={{
+              0: {
+                slidesPerView: 2,
+                slidesPerGroup: 1,
+              },
+
+              600: {
+                slidesPerView: 3,
+                slidesPerGroup: 2,
+              },
+
+              1000: {
+                slidesPerView: 5,
+                slidesPerGroup: 4,
+              },
+            }}
+
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={(swiper) => console.log(swiper)}
+          >
             {cast.map((castData, index) => (
-              <Cast
-                image={castData.profile_path}
-                castname={castData.original_name}
-                role={castData.character}
-                key={index}
-              />
+              <SwiperSlide key={index}>
+                <Cast
+                  image={castData.profile_path}
+                  castname={castData.original_name}
+                  role={castData.character}
+                />
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
         </div>
         <div className="my-8">
           <hr />
@@ -182,7 +147,7 @@ const Moviepage = () => {
         {/* poster slider */}
         <div className="my-8">
           <Poster
-            movieslider={setting}
+            movieslider={true}
             title="You might also like "
             poster={Similar}
             isDark={false}
@@ -193,7 +158,7 @@ const Moviepage = () => {
         </div>
         {/* poster slider */}
         <Poster
-          movieslider={setting}
+          movieslider={true}
           title="Recommended Movies"
           poster={Recommended}
           isDark={false}

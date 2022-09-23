@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import  Moviecontex  from "./Contex/Moviecontex";
 import ScrollToTop from "./Hoc/Scrolltotop";
+import "swiper/css/bundle";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

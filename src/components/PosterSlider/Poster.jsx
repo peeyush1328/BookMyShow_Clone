@@ -1,47 +1,13 @@
 import React from "react";
-import Slider from "react-slick";
 import Posters from "../Poster/Posters";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 const Poster = (props) => {
   const { poster, title, subtitle, movieslider, isDark, notslider, config } =
     props;
-  const setting = {
-    
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 3,
-          initialSlide: 0,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          initialSlide: 0,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 0,
-          dots: false,
-        },
-      },
-    ],
-  };
 
   return (
     <>
@@ -60,18 +26,74 @@ const Poster = (props) => {
         </div>
       )}
       {movieslider && (
-        <Slider {...movieslider}>
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={4}
+          slidesPerGroup={3}
+          modules={[Navigation]}
+          navigation={true}
+          className="mySwiper"
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+              slidesPerGroup: 1,
+            },
+
+            600: {
+              slidesPerView: 3,
+              slidesPerGroup: 2,
+            },
+
+            1024: {
+              slidesPerView: 4,
+              slidesPerGroup: 3,
+            },
+          }}
+
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+        >
           {poster.map((each, index) => (
-            <Posters {...each} isDark={isDark} key={index} />
+            <SwiperSlide key={index}>
+              <Posters {...each} isDark={isDark} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       )}
       {config && (
-        <Slider {...setting}>
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={4}
+          slidesPerGroup={3}
+          modules={[Navigation]}
+          navigation={true}
+          className="mySwiper"
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+              slidesPerGroup: 1,
+            },
+
+            600: {
+              slidesPerView: 3,
+              slidesPerGroup: 2,
+            },
+
+            1024: {
+              slidesPerView: 4,
+              slidesPerGroup: 3,
+            },
+          }}
+
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+        >
           {poster.map((each, index) => (
-            <Posters {...each} isDark={isDark} key={index} />
+            <SwiperSlide key={index}>
+              <Posters {...each} isDark={isDark} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       )}
 
       {notslider &&

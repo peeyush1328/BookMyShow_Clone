@@ -16,3 +16,9 @@ body {
   z-index: 1;
   opacity: 3;
 }
+.swiper-button-next {
+  color: rgb(238, 89, 89) !important;
+}
+.swiper-button-prev {
+  color: rgb(238, 89, 89) !important;
+}
