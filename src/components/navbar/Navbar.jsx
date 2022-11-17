@@ -24,13 +24,13 @@ function NavMD() {
   return (
     <>
       <div className="flex gap-3 w-full items-center">
-        <div className="w-10 h-10">
+        <Link to="/" className="w-10 h-10">
           <img
             src="https://lh3.googleusercontent.com/m0T5pBN2VgwdbWqJCHj75qsgIXIZEf8TPtfSK3el65lxNnoxMJwF9GwEwysG-vq9Fag"
             alt="logo"
             className="w-full h-full"
           />
-        </div>
+        </Link>
         <div className="w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md">
           <BiSearch />
           <input

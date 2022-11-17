@@ -1,70 +1,57 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BookMyShow Clone
 
-## Available Scripts
+This is clone of BookMyShow.com.I have used React, tailwindCSS, headlessUI, and the MovieDB API to acheive this. In this project I have tried to clone the “BookMyShow” website. I had build up all my efforts to do my best in this project. As, the Devtown's Mentorship was specifically to build up my skills and I also accordingly implemented all that teachings in our project to look it at its best.
 
-In the project directory, you can run:
 
-### `npm start`
+## Deployment link:
+https://book-my-show-clone-84gsqxmqb-peeyush1328.vercel.app/
+## Repository Link:
+https://github.com/peeyush1328/BookMyShow_Clone
+## Screenshots
+https://drive.google.com/drive/folders/15RYjVsyYIh-G2P4jGgnS0RAd4LxN7reo?usp=share_link
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This G-drive link is for screen shots, click on this and you will find the image preview of this project.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 
+- TailwindCSS 
+- HeadlessUI  
+- RazorpayAPI
+- MovieDB API.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- It is a Sinle Page Application.
 
-### `npm run eject`
+- At first you will land on the mainpage of the project in which you will see the bookmyshow landing page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- You can choose a movie which you want to book.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- When you chosen any movie you will redirect to the movie page of that particular movie in which you can explore more about that particular movie.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- After that you can choose the buy or rent option and pay according to that by Razorpay.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- There is 2 more pages play page and movie page which will show you the plays and movies in your cities that are currently playing.
 
-## Learn More
+- All the data is taken from MovieDB API.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Used Reusable Components in this project such that it can be reused in any other pages easily without repeatation.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Fully responsive site.
+-  
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Instruction to run the code
+- Clone my repository https://github.com/peeyush1328/BookMyShow_Clone
 
-### Analyzing the Bundle Size
+- After that  ``` npm install ``` in the vscode bash terminal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Then ```npm start``` this will take you to the landing page of the project.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- After that you can navigate to other pages from the landing page.
+- And for Razorpay payment just paste your key in paymentmodal component and in the app.js.

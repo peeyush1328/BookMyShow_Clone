@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//importing componenets...
 import Default from "../Hoc/Default";
 import Poster from "../components/PosterSlider/Poster";
 import Playfilter from "../components/PLayfilter/Playfilter";
