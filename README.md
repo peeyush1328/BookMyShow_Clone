@@ -5,7 +5,7 @@ This is clone of BookMyShow.com.I have used React, tailwindCSS, headlessUI, and 
 
 
 ## Deployment link:
-https://book-my-show-clone-84gsqxmqb-peeyush1328.vercel.app/
+https://book-my-show-clone-psi-eight.vercel.app/
 ## Repository Link:
 https://github.com/peeyush1328/BookMyShow_Clone
 ## Screenshots
