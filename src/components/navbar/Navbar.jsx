@@ -126,7 +126,7 @@ const Secnav = () => {
 const navbar = () => {
   return (
     <>
-      <nav className="bg-darkBackground-700 px-4 py-3">
+      <div className="bg-darkBackground-700 px-4 py-3">
         <div className="md:hidden">
           <NavSM />
         </div>
@@ -136,7 +136,7 @@ const navbar = () => {
         <div className="hidden md:hidden lg:flex flex-col">
           <NavLG />
         </div>
-      </nav>
+      </div>
       <div className="bg-darkBackground-950 px-4 py-2">
         <Secnav />
       </div>

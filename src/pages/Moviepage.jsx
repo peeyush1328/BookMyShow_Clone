@@ -49,7 +49,7 @@ const Moviepage = () => {
       setMovie(getmoviedata.data);
     };
     reqmovie();
-  });
+  }, []);
 
   return (
     <>
